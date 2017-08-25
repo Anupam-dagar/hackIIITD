@@ -1,6 +1,10 @@
-var btn = document.getElementById('btn');
-
-btn.addEventListener("click", function(){
+var articles = document.getElementById('articles');
+var entertainment = document.getElementById('entertainment');
+var general = document.getElementById('general');
+var politics = document.getElementById('politics');
+var sport = document.getElementById('sport');
+var technology = document.getElementById('technology');
+articles.addEventListener("click", function(){
 	//api key which I got from news-api
 	var newsApiKey = 'acdbd4dee98048688947f71353a5e8b1';
 	
@@ -18,71 +22,92 @@ btn.addEventListener("click", function(){
 	espnRequest.open("GET", 'https://newsapi.org/v1/articles?source=' + sportsSource + '&apiKey=' + newsApiKey);
 	espnRequest.onload = function(){
 		var espnData = JSON.parse(espnRequest.responseText);
-		//console.log(espnData);
+		console.log(espnData);
 	};
 	espnRequest.send();
 
 	hackerRequest.open("GET", 'https://newsapi.org/v1/articles?source=' + technicalSource + '&sortBy=latest&apiKey=' + newsApiKey);
 	hackerRequest.onload = function(){
 		var hackerData = JSON.parse(hackerRequest.responseText);
-		//console.log(hackerData);
+		console.log(hackerData);
 	};
 	hackerRequest.send();
 
 	normalRequest.open("GET", 'https://newsapi.org/v1/articles?source=' + normalSource + '&sortBy=latest&apiKey=' + newsApiKey);
 	normalRequest.onload = function(){
 		var normalData = JSON.parse(normalRequest.responseText);
-		//console.log(normalData);
+		console.log(normalData);
 	};
 	normalRequest.send();
 
 	//call by sources to get news by category
 	
 	//declare tags
-	var entertainment = 'entertainment';
-	var general = 'general';
-	var politics = 'politics';
-	var science = 'science-and-nature';
-	var sport = 'sport';
-	var technology = 'technology';
 
 	//creating requests
-	var entertainmentRequest = new XMLHttpRequest();
-	var generalRequest = new XMLHttpRequest();
-	var politicsRequest = new XMLHttpRequest();
-	var scienceRequest = new XMLHttpRequest();
-	var sportRequest = new XMLHttpRequest();
-	var technologyRequest = new XMLHttpRequest();
 
 	//calling requests
+
+
+
+
+});
+
+entertainment.addEventListener("click", function() {
+	var entertainment = 'entertainment';
+	var entertainmentRequest = new XMLHttpRequest();
 	entertainmentRequest.open("GET", 'https://newsapi.org/v1/sources?category=' + entertainment + '&language=en');
 	entertainmentRequest.onload = function(){
 		var entertainmentData = JSON.parse(entertainmentRequest.responseText);
-		//console.log(entertainmentData);
+		console.log(entertainmentData);
 	};
 	entertainmentRequest.send();
+});
 
+general.addEventListener("click", function() {
+	var general = 'general';
+	var generalRequest = new XMLHttpRequest();
 	generalRequest.open("GET", 'https://newsapi.org/v1/sources?category=' + general + '&language=en');
 	generalRequest.onload = function(){
 		var generalData = JSON.parse(generalRequest.responseText);
-		//console.log(generalData);
+		console.log(generalData);
+		generalfun(generalData);
 	};
 	generalRequest.send();
+});
 
+function generalfun(generalData) {
+	console.log("called");
+		for (var i = 0; i < generalData.length; i++) {
+			console.log(generalData[i].sources.id);
+		}
+}
+
+politics.addEventListener("click", function() {
+	var politics = 'politics';
+	var politicsRequest = new XMLHttpRequest();
 	politicsRequest.open("GET", 'https://newsapi.org/v1/sources?category=' + politics + '&language=en');
 	politicsRequest.onload = function(){
 		var politicsData = JSON.parse(politicsRequest.responseText);
-		//console.log(politicsData);
+		console.log(politicsData);
 	};
 	politicsRequest.send();
+});
 
+science.addEventListener("click", function(){
+	var science = 'science-and-nature';
+	var scienceRequest = new XMLHttpRequest();
 	scienceRequest.open("GET", 'https://newsapi.org/v1/sources?category=' + science + '&language=en');
 	scienceRequest.onload = function(){
 		var scienceData = JSON.parse(scienceRequest.responseText);
 		console.log(scienceData);
 	};
 	scienceRequest.send();
+});
 
+sport.addEventListener("click", function(){
+	var sport = 'sport';
+	var sportRequest = new XMLHttpRequest();
 	sportRequest.open("GET", 'https://newsapi.org/v1/sources?category=' + sport + '&language=en');
 	sportRequest.onload = function(){
 		var sportData = JSON.parse(sportRequest.responseText);
@@ -90,3 +115,15 @@ btn.addEventListener("click", function(){
 	};
 	sportRequest.send();
 });
+
+technology.addEventListener("click", function(){
+	var technology = 'technology';
+	var technologyRequest = new XMLHttpRequest();
+	technologyRequest.open("GET", 'https://newsapi.org/v1/sources?category=' + technology + '&language=en');
+	technologyRequest.onload = function(){
+		var technologyData = JSON.parse(technologyRequest.responseText);
+		console.log(technologyData);
+	};
+	technologyRequest.send();
+});
+
