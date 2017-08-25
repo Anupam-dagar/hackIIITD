@@ -4,10 +4,20 @@ var general = document.getElementById('general');
 var politics = document.getElementById('politics');
 var sport = document.getElementById('sport');
 var technology = document.getElementById('technology');
+
+var city = "";
+var newRequest = new XMLHttpRequest();
+newRequest.open("GET", 'http://ip-api.com/json');
+newRequest.onload = function(){
+	var data = JSON.parse(newRequest.responseText);
+	city = data.city;
+};
+newRequest.send();
+
 articles.addEventListener("click", function(){
 	//api key which I got from news-api
 	var newsApiKey = 'acdbd4dee98048688947f71353a5e8b1';
-	
+
 	//declaring news sources
 	var sportsSource = 'espn';
 	var technicalSource = 'hacker-news';
