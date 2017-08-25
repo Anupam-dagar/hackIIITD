@@ -57,12 +57,12 @@ function renderGoogle(googleData) {
 	var imgAddress = "";
 	for (var i = 0; i < googleData.articles.length; i++) {
 		imgAddress = googleData.articles[i].urlToImage;
-		googleString += imgAddress;
+		googleString += '<figure><img src="' + imgAddress + '"width="1200" height="570"/><figcaption><h1><a href="index.html#">' + googleData.articles[i].description + '</a></h1><span class="cat">' + googleData.articles[i].author + '</span></figcaption></figure>';
 	}
-	document.getElementById('googlenews').insertAdjacentHTML('afterbegin', googleString);
+	document.getElementById('goolenews').insertAdjacentHTML('afterbegin', googleString);
 }
 
-/*entertainment.addEventListener("click", function() {
+entertainment.addEventListener("click", function() {
 	var entertainment = 'entertainment';
 	var entertainmentRequest = new XMLHttpRequest();
 	entertainmentRequest.open("GET", 'https://newsapi.org/v1/sources?category=' + entertainment + '&language=en');
@@ -71,9 +71,9 @@ function renderGoogle(googleData) {
 		console.log(entertainmentData);
 	};
 	entertainmentRequest.send();
-}); */
+});
 
-/*general.addEventListener("click", function() {
+general.addEventListener("click", function() {
 	var general = 'general';
 	var generalRequest = new XMLHttpRequest();
 	generalRequest.open("GET", 'https://newsapi.org/v1/sources?category=' + general + '&language=en');
@@ -83,16 +83,16 @@ function renderGoogle(googleData) {
 		generalfun(generalData);
 	};
 	generalRequest.send();
-});*/
+});
 
 function generalfun(generalData) {
 	console.log("called");
-	for (var i = 0; i < generalData.length; i++) {
-		console.log(generalData[i].sources.id);
-	}
+		for (var i = 0; i < generalData.length; i++) {
+			console.log(generalData[i].sources.id);
+		}
 }
 
-/*politics.addEventListener("click", function() {
+politics.addEventListener("click", function() {
 	var politics = 'politics';
 	var politicsRequest = new XMLHttpRequest();
 	politicsRequest.open("GET", 'https://newsapi.org/v1/sources?category=' + politics + '&language=en');
@@ -102,8 +102,8 @@ function generalfun(generalData) {
 	};
 	politicsRequest.send();
 });
-*/
-/*science.addEventListener("click", function(){
+
+science.addEventListener("click", function(){
 	var science = 'science-and-nature';
 	var scienceRequest = new XMLHttpRequest();
 	scienceRequest.open("GET", 'https://newsapi.org/v1/sources?category=' + science + '&language=en');
@@ -135,4 +135,4 @@ technology.addEventListener("click", function(){
 	};
 	technologyRequest.send();
 });
-*/
+
