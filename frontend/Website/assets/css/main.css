@@ -2359,6 +2359,7 @@ article {
 .specialContent {
     position: static;
     right: 20px;
+    margin-left: 50%; 
     top: 0;
     transform: translateX(50%);
     -webkit-transform: translateX(50%);
