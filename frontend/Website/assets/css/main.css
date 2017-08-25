@@ -1850,7 +1850,7 @@ Page Structure
     padding-left: 80px;
     position: relative;
     padding-bottom: 1px;
-    float: right;
+    float: left;
     width: 65%;
 }
 .page .pageContentArea main{
@@ -2357,7 +2357,7 @@ article {
 }
 
 .specialContent {
-    position: absolute;
+    position: static;
     right: 20px;
     top: 0;
     transform: translateX(50%);
