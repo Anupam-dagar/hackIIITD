@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>BitNews</title>
+<link rel="icon" href="assets/img/logo1.png" type="image" sizes="16x16">
+<!--=================================
+Meta tags
+=================================-->
+<meta name="description" content="">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+<!--=================================
+Google Fonts
+=================================-->
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:400,300" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">
+<!--=================================
+Style Sheets
+=================================-->
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/pixeden-icons.css">
+<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animations.css">
+<link rel="stylesheet" type="text/css" href="assets/css/dl-menu.css">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script src="assets/js/lib/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+
+<div class="xv-overFlow">
+<!--========================================
+Body Content
+===========================================-->
+
+<header class="style1 docHeader">  
+  <nav id="sticktop" class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header clearfix">
+        <a class="navbar-brand" href="index.html"><img src="assets/img/logo3.png" alt="/"></a>
+      </div>
+      <div class="social-wrap">
+      	<ul class="social-list">
+        	<li><a href="index.html#" class="icon-twitter"></a></li>
+            <li><a href="index.html#" class="icon-facebook"></a></li>
+            <li><a href="index.html#" class="icon-tumblr"></a></li>
+            <li><a href="index.html#" class="icon-google-plus"></a></li>
+            <li><a href="index.html#" class="icon-pinterest"></a></li>
+        </ul>
+      </div>  
+      <div id="dl-menu" class="xv-menuwrapper responsive-menu">
+          <button class="dl-trigger">Open Menu</button>
+          
+          <ul class="dl-menu clearfix">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="archive.html">social</a></li>
+              <li><a href="archive.html">business</a></li>
+              <li><a href="archive.html">Tech</a></li>
+              <li><a href="archive.html">Sports</a></li>
+              <li class="parent"><a href="index.html#">Pages</a>
+              	  <ul class="lg-submenu">
+                  	  <li class="parent"><a href="index.html#">Home Pages <span class="badge badge-red">Hot</span></a>
+                      		<ul class="lg-submenu">
+                            	<li><a href="index.html">Home</a></li>
+                                <li><a href="index2.html">Home 2</a></li>
+                                <li><a href="index3.html">Home 3</a></li>
+                                <li><a href="index4.html">Home Dark</a></li>
+                            </ul>
+                      </li>
+                      <li><a href="404.html">404 Error Page <span class="badge badge-green">Bonus</span></a></li>
+                      <li><a href="page.html">Page Template <span class="badge badge-yellow">new</span></a></li>
+                  	  <li><a href="contact.html">Contact</a></li>
+                      <li><a href="single.html">Single Article</a></li>
+                      <li><a href="archive.html">Archive Page</a></li>
+                  </ul>
+              </li>
+              
+          </ul>
+      </div><!-- /dl-menuwrapper/xv-menuwrapper  -->
+    </div>
+  </nav>
+        
+</header>
+
+<!--========================================================
+After header/ Search area 
+========================================================-->
+<div class="after-header">
+	<div class="container">
+    </div>
+</div>
+
+<!--=================================
+Slider Area
+=================================-->
+<section class="xv-owl-slider default">
+	<div class="container">
+    	
+    </div>    
+</section>
+<!--=================================
+Page
+=================================-->
+<div class="mainWrapper">
+    <div class="container">
+	   <div class="pageContentArea clearfix">
+        
+            <main>
+                <h5 class="mb-20">Recent Hot News..</h5>
+                 <% for(var i=0;i<article.length;i++){ %>
+                <article>
+                    <figure class="multiImages">
+                    <% if(article[i].urlToImage){ %>
+                        <img src="<%= article[i].urlToImage %>" width="1200" height="570" alt=""/>
+                        <% }else{ %>
+                        <img src="assets/demo-data/img2.jpg" width="1200" height="570" alt=""/>
+                        <% } %>
+                    </figure>
+                   
+                    <header>
+                        <h1><a href="<%= article[i].url %>"><%= article[i].title %></a></h1>
+                        <time datetime="<%= article[i].publishedAt %>"><%= article[i].publishedAt %></time>
+                    </header>
+                    <p><%= article[i].description %></p>
+                    
+                    <div class="specialContent">
+                            <div class="shareWrapper">
+                                <ul class="social-list">
+                                    <li><a target="_blank" class="icon-twitter twitter-bg btn-twitter" href="https://twitter.com/intent/tweet?url=YOUR-URL"></a>
+                                    </li>
+                                    <li><a target="_blank" class="icon-facebook facebook-bg" href="http://www.facebook.com/sharer/sharer.php?u=YOUR-URL"></a></li>
+                                    <li><a target="_blank" class="icon-google-plus gplus-bg" href="https://plus.google.com/share?url=YOUR-URL"></a></li>
+                                </ul>
+                                <button><i class="icon-next-1-f"></i></button>
+                            </div>
+                            <a class="cat-tag" href="<%= article[i].url %>">Read More</a>
+                        </div>
+                </article>
+                <% } %>
+
+                
+                
+            </main><!--main content of current page-->
+        
+            <aside class="sidebar">
+                <header>
+                    <h3></h3>                
+                    <time datetime="2015-03-02">What's New</time> 
+                </header>
+                <div class="widget widget_timeline">
+                    <div class="timeline-wrap">
+                    <% for(var k=0;k<top.length;k++){ %>
+                        <article>
+                            <figure>
+                                <img src="<%= top[k].urlToImage %>" width="1200" height="570" alt=""/>
+                            </figure>
+                            <header>
+                                <h3><a href="<%= top[k].url %>"><%= top[k].title %></a></h3>
+                                <time datetime="2015-01-31 08:30:45.687"><%= top[k].publishedAt %></time>
+                            </header>
+                            <p><%= top[k].description %></p>
+                        </article>
+                    <% } %>
+                        <a href="index.html#" class="loadTimeline">Visit timeline</a>
+                    </div><!--timeline-wrap-->
+                </div>
+            </aside><!--sidebar-->
+        
+        </div><!--pageContentArea-->
+    </div>   
+</div>
+<div class="container">   
+    <!--=================================
+    Most visitied
+    =================================-->
+    <section class="most_visited">
+    	<header><h2>Most viewed</h2></header>
+        <div class="row">
+        	<div class="col-xs-12 col-sm-4">
+            	<article>
+                	<figure>
+                        <img src="assets/demo-data/img5.jpg" width="1200" height="570" alt=""/>
+                     </figure>
+                	<header>
+                    	<h3><a href="index.html#">Hot Air Ballon Ride </a></h3>
+                        <time datetime="2015-01-26 08:30:45.687">26 jan, 2015</time>
+                    </header>
+                    <div class="article_content">
+                    	<p>Proin ornare ultrices ipsumelo tempor tempus nullam, scels erisquer  vivamus sagittis felis.</p>
+                	</div>
+                    <footer>
+                    	<a href="index.html#" class="readMore">read</a>
+                    </footer>
+                </article>
+            </div><!--column-->
+            
+            <div class="col-xs-12 col-sm-4">
+            	<article>
+                	<figure>
+                        <img src="assets/demo-data/img4.jpg" width="1200" height="570" alt=""/>
+                     </figure>
+                	<header>
+                    	<h3><a href="index.html#">Hot Air Ballon Ride </a></h3>
+                        <time datetime="2015-01-26 08:30:45.687">26 jan, 2015</time>
+                    </header>
+                    <div class="article_content">
+                    	<p>Proin ornare ultrices ipsumelo tempor tempus nullam, scels erisquer  vivamus sagittis felis.</p>
+                	</div>
+                    <footer>
+                    	<a href="index.html#" class="readMore">read</a>
+                    </footer>
+                </article>
+            </div><!--column-->
+            
+            <div class="col-xs-12 col-sm-4">
+            	<article>
+                	<figure>
+                        <img src="assets/demo-data/img2.jpg" width="1200" height="570" alt=""/>
+                     </figure>
+                	<header>
+                    	<h3><a href="index.html#">Hot Air Ballon Ride </a></h3>
+                        <time datetime="2015-01-26 08:30:45.687">26 jan, 2015</time>
+                    </header>
+                    <div class="article_content">
+                    	<p>Proin ornare ultrices ipsumelo tempor tempus nullam, scels erisquer  vivamus sagittis felis.</p>
+                	</div>
+                    <footer>
+                    	<a href="index.html#" class="readMore">read</a>
+                    </footer>
+                </article>
+            </div><!--column-->
+        </div><!--row-->
+        <footer>
+        	<a class="viewAllPopular btn" href="index.html#">More</a>
+        </footer>
+    </section>
+    
+</div><!--container-->
+<!--=================================
+footer
+=================================-->
+<footer>
+	<div class="container">
+    	<div class="footer_inner">
+        	            
+            <div class="widget widget_newsletter">
+            	<form class="form_newsletter">
+                	<label for="subEmail"><i class="icon-mail2"></i> get our last articles</label>
+                    <input id="subEmail" type="email" required="required"/>
+                    <button>subscribe</button>
+                </form>
+            </div>
+            <div class="copyrights">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                      	<ul class="social-list">
+                            <li><a href="index.html#" class="icon-twitter"></a></li>
+                            <li><a href="index.html#" class="icon-facebook"></a></li>
+                            <li><a href="index.html#" class="icon-tumblr"></a></li>
+                            <li><a href="index.html#" class="icon-google-plus"></a></li>
+                            <li><a href="index.html#" class="icon-pinterest"></a></li>
+                        </ul>  
+                    </div><!--column-->
+                    <div class="col-xs-12 col-md-6">
+                    	<div class="rights">&copy; 2015 Voltov - All right reserved.</div>
+                    </div>
+                </div>
+            </div><!--copyrights-->    
+            
+        </div>
+    </div>
+</footer>
+
+</div>
+<!--=================================
+Script Source
+=================================-->
+<script src="assets/js/lib/jquery.js"></script>
+<script src="assets/js/lib/jquery.dlmenu.js"></script>
+<script src="assets/js/lib/owl.carousel.min.js"></script>
+<script src="assets/js/lib/jquery.sticky.js"></script>
+<script src="assets/js/lib/jquery.inview.js"></script>
+<script src="assets/js/app/main.js"></script>
+<script src="assets/js/app/apicall.js"></script>
+</body>
+</html>
