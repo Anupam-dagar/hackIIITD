@@ -31,7 +31,7 @@ newsapi.articles({
     }
    */
     newsapi.articles({
-  source: 'cnn', // required 
+  source: 'the-hindu', // required 
   sortBy: 'top' // optional 
 }).then(slider => {
   console.log(slider);
@@ -46,7 +46,7 @@ newsapi.articles({
     }
    */
 
-   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+   res.render('index', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
 
 });
    
@@ -101,7 +101,7 @@ newsapi.articles({
     }
    */
     newsapi.articles({
-  source: 'cnn', // required 
+  source: 'the-hindu', // required 
   sortBy: 'top' // optional 
 }).then(slider => {
   console.log(slider);
@@ -116,7 +116,7 @@ newsapi.articles({
     }
    */
 
-   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+   res.render('tech', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
 
 });
    
@@ -171,7 +171,7 @@ newsapi.articles({
     }
    */
     newsapi.articles({
-  source: 'cnn', // required 
+  source: 'the-hindu', // required 
   sortBy: 'top' // optional 
 }).then(slider => {
   console.log(slider);
@@ -186,7 +186,7 @@ newsapi.articles({
     }
    */
 
-   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+   res.render('finance', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
 
 });
    
@@ -241,7 +241,7 @@ newsapi.articles({
     }
    */
     newsapi.articles({
-  source: 'cnn', // required 
+  source: 'the-hindu', // required 
   sortBy: 'top' // optional 
 }).then(slider => {
   console.log(slider);
@@ -311,7 +311,7 @@ newsapi.articles({
     }
    */
     newsapi.articles({
-  source: 'cnn', // required 
+  source: 'the-hindu', // required 
   sortBy: 'top' // optional 
 }).then(slider => {
   console.log(slider);
@@ -326,7 +326,7 @@ newsapi.articles({
     }
    */
 
-   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+   res.render('sports', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
 
 });
    
@@ -381,7 +381,7 @@ newsapi.articles({
     }
    */
     newsapi.articles({
-  source: 'cnn', // required 
+  source: 'the-hindu', // required 
   sortBy: 'top' // optional 
 }).then(slider => {
   console.log(slider);
@@ -396,7 +396,7 @@ newsapi.articles({
     }
    */
 
-   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+   res.render('games', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
 
 });
    
@@ -452,7 +452,7 @@ newsapi.articles({
     }
    */
     newsapi.articles({
-  source: 'cnn', // required 
+  source: 'the-hindu', // required 
   sortBy: 'top' // optional 
 }).then(slider => {
   console.log(slider);
@@ -467,7 +467,7 @@ newsapi.articles({
     }
    */
 
-   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+   res.render('science', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
 
 });
    
@@ -522,7 +522,7 @@ newsapi.articles({
     }
    */
     newsapi.articles({
-  source: 'cnn', // required 
+  source: 'the-hindu', // required 
   sortBy: 'top' // optional 
 }).then(slider => {
   console.log(slider);
@@ -537,7 +537,7 @@ newsapi.articles({
     }
    */
 
-   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+   res.render('music', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
 
 });
    
