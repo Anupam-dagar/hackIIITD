@@ -30,8 +30,26 @@ newsapi.articles({
       ]
     }
    */
+    newsapi.articles({
+  source: 'cnn', // required 
+  sortBy: 'top' // optional 
+}).then(slider => {
+  console.log(slider);
+  /*
+    {
+      status: "ok",
+      source: "associated-press",
+      sortBy: "top",
+      articles: [
+        ...
+      ]
+    }
+   */
 
-   res.render('index', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles});
+   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+
+});
+   
 
 });
 
@@ -52,6 +70,7 @@ newsapi.articles({
 
   
 });
+
 
 router.get('/tech', function(req, res, next) {
 	let NewsAPI = require('newsapi');
@@ -81,8 +100,26 @@ newsapi.articles({
       ]
     }
    */
+    newsapi.articles({
+  source: 'cnn', // required 
+  sortBy: 'top' // optional 
+}).then(slider => {
+  console.log(slider);
+  /*
+    {
+      status: "ok",
+      source: "associated-press",
+      sortBy: "top",
+      articles: [
+        ...
+      ]
+    }
+   */
 
-   res.render('tech', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles});
+   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+
+});
+   
 
 });
 
@@ -103,6 +140,7 @@ newsapi.articles({
 
   
 });
+
 
 router.get('/finance', function(req, res, next) {
 	let NewsAPI = require('newsapi');
@@ -132,8 +170,26 @@ newsapi.articles({
       ]
     }
    */
+    newsapi.articles({
+  source: 'cnn', // required 
+  sortBy: 'top' // optional 
+}).then(slider => {
+  console.log(slider);
+  /*
+    {
+      status: "ok",
+      source: "associated-press",
+      sortBy: "top",
+      articles: [
+        ...
+      ]
+    }
+   */
 
-   res.render('finance', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles});
+   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+
+});
+   
 
 });
 
@@ -154,6 +210,7 @@ newsapi.articles({
 
   
 });
+
 
 router.get('/gadget', function(req, res, next) {
 	let NewsAPI = require('newsapi');
@@ -183,8 +240,26 @@ newsapi.articles({
       ]
     }
    */
+    newsapi.articles({
+  source: 'cnn', // required 
+  sortBy: 'top' // optional 
+}).then(slider => {
+  console.log(slider);
+  /*
+    {
+      status: "ok",
+      source: "associated-press",
+      sortBy: "top",
+      articles: [
+        ...
+      ]
+    }
+   */
 
-   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles});
+   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+
+});
+   
 
 });
 
@@ -235,9 +310,27 @@ newsapi.articles({
       ]
     }
    */
+    newsapi.articles({
+  source: 'cnn', // required 
+  sortBy: 'top' // optional 
+}).then(slider => {
+  console.log(slider);
+  /*
+    {
+      status: "ok",
+      source: "associated-press",
+      sortBy: "top",
+      articles: [
+        ...
+      ]
+    }
+   */
 
-   res.render('sports', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles});
+   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+
+});
    
+
 });
 
   
@@ -257,6 +350,7 @@ newsapi.articles({
 
   
 });
+
 
 router.get('/Games', function(req, res, next) {
 	let NewsAPI = require('newsapi');
@@ -286,9 +380,27 @@ newsapi.articles({
       ]
     }
    */
+    newsapi.articles({
+  source: 'cnn', // required 
+  sortBy: 'top' // optional 
+}).then(slider => {
+  console.log(slider);
+  /*
+    {
+      status: "ok",
+      source: "associated-press",
+      sortBy: "top",
+      articles: [
+        ...
+      ]
+    }
+   */
 
-   res.render('games', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles});
+   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+
+});
    
+
 });
 
   
@@ -308,6 +420,7 @@ newsapi.articles({
 
   
 });
+
 
 
 router.get('/Science', function(req, res, next) {
@@ -338,9 +451,27 @@ newsapi.articles({
       ]
     }
    */
+    newsapi.articles({
+  source: 'cnn', // required 
+  sortBy: 'top' // optional 
+}).then(slider => {
+  console.log(slider);
+  /*
+    {
+      status: "ok",
+      source: "associated-press",
+      sortBy: "top",
+      articles: [
+        ...
+      ]
+    }
+   */
 
-   res.render('science', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles});
+   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+
+});
    
+
 });
 
   
@@ -359,7 +490,6 @@ newsapi.articles({
 
 
   
-
 });
 
 
@@ -391,9 +521,27 @@ newsapi.articles({
       ]
     }
    */
+    newsapi.articles({
+  source: 'cnn', // required 
+  sortBy: 'top' // optional 
+}).then(slider => {
+  console.log(slider);
+  /*
+    {
+      status: "ok",
+      source: "associated-press",
+      sortBy: "top",
+      articles: [
+        ...
+      ]
+    }
+   */
 
-   res.render('music', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles});
+   res.render('gadget', { title: 'Express',article:articlesResponse.articles,top:topresponses.articles,slider:slider.articles});
+
+});
    
+
 });
 
   
@@ -413,6 +561,7 @@ newsapi.articles({
 
   
 });
+
 
 
 

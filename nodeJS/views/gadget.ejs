@@ -41,7 +41,7 @@ Body Content
   <nav id="sticktop" class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header clearfix">
-        <a class="navbar-brand" href="index.html"><img src="assets/img/logo3.png" alt="/"></a>
+        <a class="navbar-brand" href="index.html"><img src="assets/img/logo2.png" alt="/"></a>
       </div>
       <div class="social-wrap">
       	<ul class="social-list">
@@ -98,8 +98,17 @@ After header/ Search area
 Slider Area
 =================================-->
 <section class="xv-owl-slider default">
-	<div class="container">
-    	
+    <div class="container">
+        <div class="xv-owl-wrap">
+        <% for(var b=0;b<slider.length;b++){ %>
+            <figure>
+                <img src="<%= slider[b].urlToImage %>" alt="" width="1200" height="570"/>
+                <figcaption><h1><a href="<%= slider[b].url %>"><%= slider[b].title %></a></h1>
+                <span class="cat"></span></figcaption>
+            </figure>
+            <% } %>
+           
+        </div>    
     </div>    
 </section>
 <!--=================================
